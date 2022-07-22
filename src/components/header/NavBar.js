@@ -24,8 +24,9 @@ export default function FullWidthTabs() {
           className="tabs"
         >
           <Tab label="Accueil" className="tab" color="palette.primary.main" />
-          <Tab label="Déposer une annonce" className="tab" />
-          <Tab label="Ville" className="tab" />
+          <Tab label="Services" className="tab" />
+          <Tab label="Réserver maintenant" className="tab" />
+          <Tab label="À propos" className="tab" />
         </Tabs>
       </AppBar>
     </Box>
