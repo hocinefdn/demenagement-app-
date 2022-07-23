@@ -18,7 +18,6 @@ export default function FullWidthTabs() {
           value={value}
           onChange={handleChange}
           indicatorColor="primary"
-          textColor="black"
           variant="fullWidth"
           aria-label="full width tabs example"
           className="tabs"

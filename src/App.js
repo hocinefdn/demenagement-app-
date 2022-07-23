@@ -1,7 +1,7 @@
 import { createTheme, ThemeProvider } from "@mui/material";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
-import { red } from "@mui/material/colors";
+import { red, green } from "@mui/material/colors";
 function App() {
   const theme = createTheme({
     palette: {
@@ -9,10 +9,13 @@ function App() {
         main: red[500],
       },
       secondary: {
-        main: "#11cb5f",
+        main: green[500],
       },
       white: {
         main: "#ffffff",
+      },
+      text: {
+        white: "#ffffff",
       },
     },
   });
