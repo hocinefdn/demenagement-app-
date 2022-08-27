@@ -5,6 +5,7 @@ import { Button } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { red } from "@mui/material/colors";
 import StepsHome from "../components/home/StepsHome";
+import { Link } from "react-router-dom";
 function Home() {
   const ColorButton = styled(Button)(({ theme }) => ({
     color: theme.palette.getContrastText(red[500]),
@@ -29,9 +30,11 @@ function Home() {
             livraison au Canada. Ils transportent tes gros objets en toute
             sérénité, du point A au point B.
           </div>
-          <ColorButton variant="contained">
-            Obtiens ton estimation gratuite instantanée
-          </ColorButton>
+
+          <Link to="/estimation">
+            <ColorButton variant="contained" to="/eueueu">
+              Obtiens ton estimation gratuite instantanée
+            </ColorButton></Link>
         </div>
         <div style={{ height: "200px" }} />
       </Parallax>
