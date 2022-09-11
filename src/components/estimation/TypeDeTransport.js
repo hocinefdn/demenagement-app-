@@ -20,10 +20,10 @@ export default function TypeDeTransport() {
     };
 
     const pieces = ["Salon", "Cuisine/Salle à manger", "Electroménagers", "Chambre/Salle de bain"];
-    const itemsSalon = ["Bibliothéque", "Table basse", "Porte-manteau"];
-    const itemsCuisine = ["Buffet", "Table à manger", "Frigo", "Cuisiniére"];
-    const itemsElectro = ["Frigo", "Machine à laver"];
-    const itemsChambre = ["Lit", "Télé"];
+    const itemsSalon = ["Bibliothéque", "Table basse", "Porte-manteau", "Canapé", "Tiroir", "Meuble télé", "Télévision", "Chaises", "Rangement Chassures", "Fauteuil", "Table d'appoint", "Etagère"];
+    const itemsCuisine = ["Buffet", "Table à manger", "Frigo", "Cuisiniére", "Machine à café", "Micro onde", "Etagère en verre", "Poubelle"];
+    const itemsElectro = ["Réfregirateur", "Machine à laver", "Climatiseur", "Cuisinière", "Four", "Sèche-linge", "Lave-vaisselle"];
+    const itemsChambre = ["Lit", "Télé", "Commode", "Cadre de lit", "Matelas", "Cadre de futon", "Miroir", "Table de nuit", "Valise", "Boite garde-robe"];
     let component;
     if (piece === "Salon") {
         component = itemsSalon.map((item) => {
@@ -57,6 +57,7 @@ export default function TypeDeTransport() {
         console.log(listItem)
 
     }
+
 
     React.useEffect(() => {
 
