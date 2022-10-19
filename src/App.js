@@ -1,10 +1,10 @@
 import { createTheme, ThemeProvider } from "@mui/material";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
-import Connexion from "./pages/Connexion"
 import Inscription from "./pages/Inscription"
 import { red, green } from "@mui/material/colors";
 import Estimation from "./pages/Estimation";
+import SignIn from "./pages/connnexxion";
 function App() {
   const theme = createTheme({
     palette: {
@@ -24,10 +24,11 @@ function App() {
   });
   return (
     <div className="App">
+
       <ThemeProvider theme={theme}>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/connexion" element={<Connexion />} />
+          <Route path="/connexion" element={<SignIn />} />
           <Route path="/inscription" element={<Inscription />} />
           <Route path="/estimation" element={<Estimation />} />
         </Routes>

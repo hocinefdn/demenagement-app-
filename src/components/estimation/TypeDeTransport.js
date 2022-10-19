@@ -1,14 +1,16 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
-import Select from '@mui/material/Select';
-import { Button, TextField } from '@mui/material';
-import SimpleBtn from "../buttons/SimpleBtn"
-import ListObjets from './ListObjets';
+
+import {Tab} from '@mui/material';
+import { TabContext,TabPanel,TabList } from '@mui/lab';
+import ListMeuble from './listemeuble';
+import Salon from './item/salon/meuble';
+import  Chambre  from './item/chambre';
+import Cuisine from './item/cuisine';
+import Autre from './item/autre';
+
 export default function TypeDeTransport() {
-    const [piece, setPiece] = React.useState('');
+  /*  const [piece, setPiece] = React.useState('');
     const [item, setItem] = React.useState('');
     const [listItem, setListItem] = React.useState([]);
 
@@ -17,9 +19,53 @@ export default function TypeDeTransport() {
     };
     const handleChangeItem = (event) => {
         setItem(event.target.value);
-    };
+    };*/
 
-    const pieces = ["Salon", "Cuisine/Salle à manger", "Electroménagers", "Chambre/Salle de bain"];
+    const [value, setValue] = React.useState("1");
+
+    const handleChange = (event, newValue) => {
+      setValue(newValue);
+    };
+        
+     return(
+        <TabContext value={value} >
+        <Box sx={{ borderBottom: 1, borderColor: 'divider',width:"100%"}}>
+          <TabList onChange={handleChange} aria-label="lab API tabs example" centered 
+           
+          variant="fullWidth"
+          >
+            <Tab label="salon" value="1"  />
+            <Tab label="chambre" value="2" />
+            <Tab label="cuisine" value="3" />
+            <Tab label="autre" value="4" />
+            
+          </TabList>
+        </Box>
+        <TabPanel value="1">
+          
+        <ListMeuble componant={Salon}></ListMeuble>
+
+
+        </TabPanel>
+        <TabPanel value="2">
+            <ListMeuble componant={Chambre}></ListMeuble>
+        </TabPanel>
+        <TabPanel value="3">
+            <ListMeuble componant={Cuisine}></ListMeuble>
+        </TabPanel>
+        <TabPanel value='4' >
+           <ListMeuble componant={Autre}></ListMeuble>
+        </TabPanel>
+      </TabContext>
+
+     )
+
+
+
+
+
+
+   /* const pieces = ["Salon", "Cuisine/Salle à manger", "Electroménagers", "Chambre/Salle de bain"];
     const itemsSalon = ["Bibliothéque", "Table basse", "Porte-manteau", "Canapé", "Tiroir", "Meuble télé", "Télévision", "Chaises", "Rangement Chassures", "Fauteuil", "Table d'appoint", "Etagère"];
     const itemsCuisine = ["Buffet", "Table à manger", "Frigo", "Cuisiniére", "Machine à café", "Micro onde", "Etagère en verre", "Poubelle"];
     const itemsElectro = ["Réfregirateur", "Machine à laver", "Climatiseur", "Cuisinière", "Four", "Sèche-linge", "Lave-vaisselle"];
@@ -110,5 +156,5 @@ export default function TypeDeTransport() {
                 <ListObjets list={listItem} />
             </Box>
         </div>
-    );
+    );*/
 }

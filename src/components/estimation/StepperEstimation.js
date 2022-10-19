@@ -10,7 +10,7 @@ import TypeDeTransport from './TypeDeTransport';
 import Horaire from './Horaire';
 import Validation from './Validation';
 
-const steps = ['Itinéraire', 'Type de transport', 'Horaire', 'Validation'];
+const steps = ['Itinéraire', 'Meuble', 'Horaire', 'Validation'];
 
 export default function StepperEstimation() {
     const [activeStep, setActiveStep] = React.useState(0);

@@ -8,8 +8,25 @@ import Badge from "@mui/material/Badge";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import MailIcon from "@mui/icons-material/Mail";
 import NotificationsIcon from "@mui/icons-material/Notifications";
+import { Link } from "react-router-dom";
+import { useState,useEffect } from "react";
 
-export default function PrimarySearchAppBar() {
+export default function PrimarySearchAppBar({match}) {
+
+   const [user,setUser]= React.useState();
+
+  /* useEffect(()=> {
+
+ Utilisateur.forEach(utilisateur=> {
+         if(match.params.id==utilisateur.id){
+          setUser(utilisateur)
+         }
+   })
+
+
+   })*/
+
+
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" color="white">
@@ -21,7 +38,7 @@ export default function PrimarySearchAppBar() {
             sx={{ display: { xs: "none", sm: "block" } }}
             color="primary"
           >
-            Déménagement
+            Vedel
           </Typography>
 
           <Box sx={{ flexGrow: 1 }} />
@@ -44,6 +61,7 @@ export default function PrimarySearchAppBar() {
                 <NotificationsIcon />
               </Badge>
             </IconButton>
+            <Link to="/connexion">
             <IconButton
               size="large"
               edge="end"
@@ -51,8 +69,10 @@ export default function PrimarySearchAppBar() {
               aria-haspopup="true"
               color="inherit"
             >
+            
               <AccountCircle />
             </IconButton>
+            </Link>
           </Box>
         </Toolbar>
       </AppBar>

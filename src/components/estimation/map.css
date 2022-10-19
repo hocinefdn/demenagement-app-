@@ -1,0 +1,47 @@
+.leaflet-container{
+    height:400px;
+    width: 100%;
+}
+#map{
+    height:500px;
+    width: 1200px;
+}
+.leaflet-routing-geocoders input{
+    font: inherit;
+    letter-spacing: inherit;
+    color: currentColor;
+    padding: 4px 0 5px;
+    border: 0;
+    box-sizing: content-box;
+    background: none;
+    height: 1.4375em;
+    margin: 0;
+    -webkit-tap-highlight-color: transparent;
+    display: block;
+    min-width: 0;
+    width: 90%;
+    -webkit-animation-name: mui-auto-fill-cancel;
+    animation-name: mui-auto-fill-cancel;
+    -webkit-animation-duration: 10ms;
+    animation-duration: 10ms;
+    padding: 16.5px 14px;
+}
+.leaflet-routing-geocoders{
+    width: 100%;
+}
+.leaflet-routing-container{
+    width: 500px;
+}
+path.leaflet-interactive.animate {
+    stroke-dasharray: 1920;
+    stroke-dashoffset: 1920;
+    animation: dash 20s linear 3s forwards;
+}
+
+
+.leaflet-routing-add-waypoint{
+    display: none;
+}
+.leaflet-routing-alt {
+    display: none;
+}

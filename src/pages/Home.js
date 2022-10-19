@@ -48,8 +48,8 @@ function Home() {
             <div className="col-span-2">
               <StepsHome
                 step="1"
-                label="Choisis ton service"
-                description="Sélectionne le type de transport de biens dont tu as besoin"
+                label="Renseigne tes informations"
+                description="Sélectionne l'itinéraire et les meubles à déménager"
                 side="right"
               />
             </div>
@@ -67,7 +67,7 @@ function Home() {
             <div className="col-span-2 ...">
               <StepsHome
                 step="3"
-                label="Relaxe-toi"
+                label="Prend Rendez-vous"
                 description="Laisse nos Mates qualifiés transporter tes biens en tout sécurité!"
               />
             </div>
