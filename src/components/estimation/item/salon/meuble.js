@@ -56,7 +56,7 @@ export const Salon= [
         nomMeuble: 'table',
         idCategorie: 3,
         photo:require('../../../../assets/table.png'),
-        nombreDeMeuble: 21321
+        nombreDeMeuble: 21
     },
     {
         idMeuble: 3,
@@ -67,7 +67,7 @@ export const Salon= [
         nomMeuble: 'chaise',
         idCategorie: 3,
         photo:require('../../../../assets/chaise.png'),
-        nombreDeMeuble: 21321
+        nombreDeMeuble: 21
     },
     {
         idMeuble: 3,
@@ -78,7 +78,7 @@ export const Salon= [
         nomMeuble: 'meuble à chaussure',
         idCategorie: 3,
         photo:require('../../../../assets/meuble-chaussure-armoir.png'),
-        nombreDeMeuble: 21321
+        nombreDeMeuble: 21
     },
     {
         idMeuble: 3,
@@ -89,7 +89,7 @@ export const Salon= [
         nomMeuble: 'bibliotheque',
         idCategorie: 3,
         photo:require('../../../../assets/meuble-chaussure-armoir.png'),
-        nombreDeMeuble: 21321
+        nombreDeMeuble: 21
     },
 ]
 export default Salon;

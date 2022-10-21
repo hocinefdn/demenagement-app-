@@ -10,9 +10,20 @@ import TypeDeTransport from './TypeDeTransport';
 import Horaire from './Horaire';
 import Validation from './Validation';
 
+import { prixContext } from '../../contextprix/context';
 const steps = ['Itinéraire', 'Meuble', 'Horaire', 'Validation'];
 
 export default function StepperEstimation() {
+
+    
+    
+
+
+    
+
+
+
+
     const [activeStep, setActiveStep] = React.useState(0);
 
     const handleNext = () => {
@@ -35,7 +46,7 @@ export default function StepperEstimation() {
     }
 
     if (activeStep === 1) {
-        component = <TypeDeTransport />
+        component = <TypeDeTransport  />
     }
 
     if (activeStep === 2) {
@@ -45,7 +56,9 @@ export default function StepperEstimation() {
         component = <Validation />
     }
 
+    const value=React.useContext(prixContext);
     return (
+       <prixContext.Provider value={value}>
         <Box sx={{ width: '100%' }}>
             <Stepper activeStep={activeStep}>
                 {steps.map((label, index) => {
@@ -94,5 +107,6 @@ export default function StepperEstimation() {
                 </React.Fragment>
             )}
         </Box>
+        </prixContext.Provider>
     );
 }

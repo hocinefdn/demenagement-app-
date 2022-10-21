@@ -8,26 +8,45 @@ import Salon from './item/salon/meuble';
 import  Chambre  from './item/chambre';
 import Cuisine from './item/cuisine';
 import Autre from './item/autre';
-
+import { prixContext } from '../../contextprix/context';
 export default function TypeDeTransport() {
-  /*  const [piece, setPiece] = React.useState('');
-    const [item, setItem] = React.useState('');
-    const [listItem, setListItem] = React.useState([]);
-
-    const handleChangePiece = (event) => {
-        setPiece(event.target.value);
-    };
-    const handleChangeItem = (event) => {
-        setItem(event.target.value);
-    };*/
 
     const [value, setValue] = React.useState("1");
+    const values=React.useContext(prixContext);
+let prixtransport=0;
+
+ 
+
+
+
+ /*prixMeubles= (JSON.parse(window.localStorage.getItem('Salon'))).prix + (JSON.parse(window.localStorage.getItem('Cuisine'))).prix + (JSON.parse(window.localStorage.getItem('Chambre'))).prix +(JSON.parse(window.localStorage.getItem('Autre'))).prix*/
+
+
+/* const updateprix={
+ prixSalon:(JSON.parse(window.localStorage.getItem('Salon'))).prix,
+ prixCuisine:(JSON.parse(window.localStorage.getItem('Cuisine'))).prix,
+ prixChambre:(JSON.parse(window.localStorage.getItem('Chambre'))).prix,
+ prixAutre:(JSON.parse(window.localStorage.getItem('Autre'))).prix
+ }
+
+Number(JSON.parse(window.localStorage.getItem(JSON.stringify(Autre))))
+ setPrixMeuble(prixMeuble =>({
+    ...prixMeuble,
+    ...updateprix
+ }))
+
+values.setx(values.x+prixMeuble.prixSalon+prixMeuble.prixAutre+prixMeuble.prixChambre+prixMeuble.prixCuisine)*/
+
+
 
     const handleChange = (event, newValue) => {
       setValue(newValue);
     };
+
+
         
      return(
+        <prixContext.Provider value={values}>
         <TabContext value={value} >
         <Box sx={{ borderBottom: 1, borderColor: 'divider',width:"100%"}}>
           <TabList onChange={handleChange} aria-label="lab API tabs example" centered 
@@ -57,6 +76,7 @@ export default function TypeDeTransport() {
            <ListMeuble componant={Autre}></ListMeuble>
         </TabPanel>
       </TabContext>
+      </prixContext.Provider>
 
      )
 

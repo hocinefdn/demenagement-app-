@@ -26,12 +26,12 @@ function Copyright(props) {
   );
 }
 
-
 export default function SignIn() {
 
 
   const [mail,setMail]= React.useState("")
   const [motdepasse,setMotdepasse]=React.useState("")
+  const [connected,setConnected]= React.useState(null)
   const handleSubmit = (event) => {
     event.preventDefault();
     const datas= {
@@ -44,8 +44,7 @@ export default function SignIn() {
       method: "POST",
       data:datas
   
-     }).then(res=>(console.log(res)
-      
+     }).then(res=>(setConnected(res.data)
      ))
        .catch(err=>console.log(err))
   };
